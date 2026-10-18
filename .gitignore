@@ -4,3 +4,7 @@ node_modules
 *.log
 .env*
 !.env.example
+.DS_Store
+*.tsbuildinfo
+.rag-cache/
+dataset/
