@@ -117,7 +117,7 @@ export function ChatWorkspace({ profile, initialRooms, initialError }: {
   return <main className="workspace">
     {sidebarOpen && <button className="sidebar-scrim" aria-label="대화 목록 닫기" onClick={() => setSidebarOpen(false)} />}
     <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
-      <Link href="/chat" className="logo"><span className="brand-mark">✦</span>모두의 AI</Link>
+      <Link href="/chat" className="logo"><span className="brand-mark">✦</span>(주)성원 RAG기반 AI</Link>
       <button className="new-chat" onClick={newRoom} disabled={busy}>＋ 새 대화<span>↗</span></button>
       <div className="sidebar-label">나의 대화 <span>{rooms.length}</span></div>
       <nav className="room-list" aria-label="저장된 채팅방">
@@ -144,7 +144,7 @@ export function ChatWorkspace({ profile, initialRooms, initialError }: {
         </div> : <div className="message-list">
           {turns.map((turn) => <div key={turn.id} className="turn">
             <article className="message-row user"><div className="message-body"><div className="message-content">{turn.question}</div><time className="message-time" dateTime={turn.created_at}>{timestamp(turn.created_at)}</time></div></article>
-            <article className="message-row assistant"><div className="avatar">✦</div><div className="message-body"><div className="message-author">모두의 AI</div>
+            <article className="message-row assistant"><div className="avatar">✦</div><div className="message-body"><div className="message-author">(주)성원 RAG기반 AI</div>
               {turn.answer ? <><div className="message-content"><FormattedMessage content={turn.answer} /></div>
                 {turn.sources?.length > 0 && <div className="sources"><div className="sources-label">참고한 자료 · {turn.sources.length}</div>
                   {turn.sources.map((source, index) => <details className="source-detail" key={`${source.title}-${source.page}-${index}`}><summary><span>{index + 1}</span>{source.type === "document" ? "▤" : "↗"} {source.title}{source.page && <b>{source.page}쪽</b>}</summary>

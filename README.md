@@ -1,4 +1,4 @@
-# 모두의 AI
+# (주)성원 RAG기반 AI
 
 `dataset` 문서를 바탕으로 답하고, 최신 정보가 필요한 질문은 Tavily MCP로 검색하는 RAG 챗봇입니다. Next.js, Upstage Solar/Embedding, Supabase Auth·Postgres·pgvector로 구성되어 있습니다.
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "모두의 AI",
+  title: "(주)성원 RAG기반 AI",
   description: "누구나 편하게 사용하는 AI 어시스턴트",
 };
 
